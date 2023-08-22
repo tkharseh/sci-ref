@@ -8,6 +8,8 @@ import { ReactComponent as PubMed } from "./assets/pubmed.svg";
 import SubmitButton from "./components/SubmitButton";
 import { DndListHandle } from "./components/DragAndDrop";
 import OutputBox from "./components/OutputBox";
+import { ModalsProvider } from "@mantine/modals";
+import Modal from "./components/Modal";
 
 function App() {
   const dragAndDropTitles = [
@@ -21,15 +23,17 @@ function App() {
   ];
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <div className="grid justify-items-center">
-        <Logo />
-        <Instructions />
-        <DndListHandle data={dragAndDropTitles} />
-        <RepositoryButton logo={<PubMed />} name="PubMed" />
-        <FloatingLabelInput />
-        <SubmitButton />
-        <OutputBox />
-      </div>
+      <ModalsProvider modals={{ demonstration: Modal /* ...other modals */ }}>
+        <div className="grid justify-items-center">
+          <Logo />
+          <Instructions />
+          <DndListHandle data={dragAndDropTitles} />
+          <RepositoryButton logo={<PubMed />} name="PubMed" />
+          <FloatingLabelInput />
+          <SubmitButton />
+          <OutputBox />
+        </div>
+      </ModalsProvider>
     </MantineProvider>
   );
 }
