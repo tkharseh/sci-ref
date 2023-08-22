@@ -1,4 +1,4 @@
-import React, { Component, ReactNode, useState } from "react";
+import React, { ReactNode, useState } from "react";
 
 interface RepositoryProps {
   logo: ReactNode;
@@ -7,11 +7,11 @@ interface RepositoryProps {
 
 const RepositoryButton = ({ logo, name }: RepositoryProps) => {
   const [selected, setSelected] = useState(false);
+
   return (
     <button
-      className={`border-2 border-black hover:bg-gray-200 p-10 rounded-lg duration-300 bg-${
-        selected ? "gray-200" : "white"
-      }`}
+      className="border-2 border-black p-5 rounded-lg duration-300"
+      style={{ backgroundColor: selected ? "#e5e7eb" : "white" }}
       onClick={() => {
         setSelected(!selected);
       }}
