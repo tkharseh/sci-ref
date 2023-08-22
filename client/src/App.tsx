@@ -2,7 +2,7 @@ import "./App.css";
 import { ReactComponent as Logo } from "./assets/logo.svg";
 import Instructions from "./components/Instructions";
 import { MantineProvider } from "@mantine/core";
-import { FloatingLabelInput } from "./components/FloatingLabelInput";
+import { InputBox } from "./components/InputBox";
 import RepositoryButton from "./components/RepositoryButton";
 import { ReactComponent as PubMed } from "./assets/pubmed.svg";
 import SubmitButton from "./components/SubmitButton";
@@ -24,12 +24,12 @@ function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <ModalsProvider modals={{ demonstration: Modal /* ...other modals */ }}>
-        <div className="grid justify-items-center">
+        <div className="grid justify-items-center gap-4">
           <Logo />
           <Instructions />
           <DndListHandle data={dragAndDropTitles} />
           <RepositoryButton logo={<PubMed />} name="PubMed" />
-          <FloatingLabelInput />
+          <InputBox />
           <SubmitButton />
           <OutputBox />
         </div>

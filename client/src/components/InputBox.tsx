@@ -43,7 +43,7 @@ const useStyles = createStyles(
   })
 );
 
-export function FloatingLabelInput() {
+export function InputBox() {
   const [focused, setFocused] = useState(false);
   const [value, setValue] = useState("");
   const { classes } = useStyles({
@@ -62,6 +62,7 @@ export function FloatingLabelInput() {
       onBlur={() => setFocused(false)}
       mt="md"
       autoComplete="nope"
+      style={{ width: "50vw" }}
     />
   );
 }
