@@ -2,6 +2,7 @@ import "./App.css";
 import { ReactComponent as Logo } from "./assets/logo.svg";
 import Instructions from "./components/Instructions";
 import { MantineProvider } from "@mantine/core";
+import SubmitButton from "./components/SubmitButton";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="grid justify-items-center">
         <Logo />
         <Instructions />
+        <SubmitButton />
       </div>
     </MantineProvider>
   );
