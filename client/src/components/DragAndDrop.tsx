@@ -2,6 +2,7 @@ import { createStyles, rem, Text } from "@mantine/core";
 import { useListState } from "@mantine/hooks";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { IconGripVertical } from "@tabler/icons-react";
+import { useEffect } from "react";
 
 const useStyles = createStyles((theme) => ({
   item: {
@@ -47,11 +48,18 @@ interface DndListHandleProps {
     id: string;
     name: string;
   }[];
+  setOrder: any;
 }
 
-export function DndListHandle({ data }: DndListHandleProps) {
+export function DndListHandle({ data, setOrder }: DndListHandleProps) {
   const { classes, cx } = useStyles();
   const [state, handlers] = useListState(data);
+  useEffect(() => {
+    const newOrder = state.map(item => item.id)
+    console.log(newOrder)
+    setOrder(newOrder)
+  }, [state])
+  
 
   const items = state.map((item, index) => (
     <Draggable key={item.id} index={index} draggableId={item.id}>

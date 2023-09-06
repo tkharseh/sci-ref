@@ -1,19 +1,20 @@
 import React, { ReactNode, useState } from "react";
 
 interface RepositoryProps {
+  id: string;
   logo: ReactNode;
-  name: string;
+  selectedRepository: any;
+  setSelectedRepository: any;
 }
 
-const RepositoryButton = ({ logo, name }: RepositoryProps) => {
-  const [selected, setSelected] = useState(false);
+const RepositoryButton = ({ id, logo, selectedRepository, setSelectedRepository }: RepositoryProps) => {
 
   return (
     <button
       className="border-2 border-black p-5 rounded-lg duration-300"
-      style={{ backgroundColor: selected ? "#e5e7eb" : "white" }}
+      style={{ backgroundColor: selectedRepository === id ? "#e5e7eb" : "white" }}
       onClick={() => {
-        setSelected(!selected);
+        setSelectedRepository(id);
       }}
     >
       {logo}

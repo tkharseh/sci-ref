@@ -43,9 +43,13 @@ const useStyles = createStyles(
   })
 );
 
-export function InputBox() {
+interface InputBoxProps {
+  value: string
+  setValue: React.Dispatch<React.SetStateAction<string>>
+}
+
+export function InputBox({value, setValue}: InputBoxProps) {
   const [focused, setFocused] = useState(false);
-  const [value, setValue] = useState("");
   const { classes } = useStyles({
     floating: value.trim().length !== 0 || focused,
   });

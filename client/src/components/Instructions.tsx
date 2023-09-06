@@ -3,7 +3,7 @@ import React from "react";
 const Instructions = () => {
   return (
     <div className="text-center max-w-4xl mx-auto px-1 py-2">
-      <h1 className="font-sans text-black-600 font-bold text-xl">
+      <h1 className="font-sans text-black-600 font-bold">
         Instructions
       </h1>
       <p className="font-sans text-black text-xl">
