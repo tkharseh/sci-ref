@@ -9,7 +9,7 @@ SciRef is a powerful tool designed to simplify the process of creating customize
 
 ## Installation
 Clone the repository to your local machine
-- got clone https://github.com/tkharseh/sci-ref.git
+- git clone https://github.com/tkharseh/sci-ref.git
 
 ## How it works
 1. Arrange Reference Components: Drag and drop the scientific reference components in your preferred order. Your outputted reference will precisely match the order you select.
