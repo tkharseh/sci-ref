@@ -2,7 +2,7 @@
 
 ## Video Demonstration: https://www.youtube.com/watch?v=9HHPSzM4Fpg
 
-## Description
+### Description
 SciRef is a powerful tool designed to simplify the process of creating customized scientific references from provided URLs. Whether you're a researcher, student, or anyone who needs to cite online scientific sources accurately, this program streamlines the task for you. 
 
 ## Prerequisites
